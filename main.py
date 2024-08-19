@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template_string, render_template
 
-app = Flask(__name__, template_folder="html_pages")
+app = Flask(__name__, template_folder="templates")
 
 @app.route('/')
 def index():
