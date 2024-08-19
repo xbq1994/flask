@@ -9,7 +9,7 @@ def index():
     if 'Mobile' in user_agent:
         return render_template_string("<h1>Mobile Version</h1><p>You are using a mobile device.</p>")
     elif 'Chrome' in user_agent:
-        return render_template_string("<h1>Chrome Browser</h1><p>You are using Chrome browser.</p>")
+        return render_template_string("<h1>Chrome Browser</h1><p>桂桂快睡觉.</p>")
     else:
         return render_template_string("<h1>Desktop Version</h1><p>You are using a desktop device.</p>")
 
