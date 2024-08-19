@@ -6,8 +6,9 @@ logging.basicConfig(level=logging.INFO)
 
 @app.route('/')
 def index():
-    app.logger.info(f'Accessed: {request.path} from {request.remote_addr}')
+
     user_agent = request.headers.get('User-Agent')
+    app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent}')
     if 'ChatGPT' in user_agent:  # now add condition on LLM agent specified string and render accordingly
         return render_template("alex_fake.html")
     elif 'Chrome' in user_agent:
