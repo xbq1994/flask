@@ -8,12 +8,14 @@ logging.basicConfig(level=logging.INFO)
 def index():
 
     user_agent = request.headers.get('User-Agent')
-    app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent}')
     if 'ChatGPT' in user_agent:  # now add condition on LLM agent specified string and render accordingly
+        app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"alex_fake.html"}')
         return render_template("alex_fake.html")
     elif 'Chrome' in user_agent:
+        app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"alex_real.html"}')
         return render_template("alex_real.html")
     else:
+        app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"empty"}')
         return render_template_string("<h1>Desktop Version</h1><p>You are using a desktop device.</p>")
 
 if __name__ == '__main__':
