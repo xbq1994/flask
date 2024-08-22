@@ -16,7 +16,7 @@ def index():
         return render_template("alex_real.html")
     else:
         app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"empty"}')
-        return render_template_string("<h1>Desktop Version</h1><p>You are using a desktop device.</p>")
+        return render_template("alex_real.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
