@@ -15,7 +15,7 @@ def index():
             {"name": "Bob", "age": 24, "city": "Los Angeles"},
             {"name": "Charlie", "age": 29, "city": "Chicago"}
         ]
-        return render_template("alex_fake.html", data=data)
+        return render_template("table_real.html", data=data)
     elif 'Chrome' in user_agent:
         app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"alex_real.html"}')
         data = [
@@ -23,7 +23,7 @@ def index():
             {"name": "Bob", "age": 24, "city": "Los Angeles"},
             {"name": "Charlie", "age": 29, "city": "Chicago"}
         ]
-        return render_template("alex_real.html", data=data)
+        return render_template("table_real.html", data=data)
     else:
         app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"empty"}')
         return render_template("alex_real.html")
