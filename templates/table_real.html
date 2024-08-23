@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Table Example</title>
+    <title>Personal Information</title>
     <style>
         table {
             width: 50%;
@@ -26,22 +26,20 @@
 </head>
 <body>
 
-<h2>User Information</h2>
+<h2>Personal Information</h2>
 
 <table>
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>City</th>
+            <th>Item</th>
+            <th>Value</th>
         </tr>
     </thead>
     <tbody>
         {% for row in data %}
         <tr>
-            <td>{{ row.name }}</td>
-            <td>{{ row.age }}</td>
-            <td>{{ row.city }}</td>
+            <td>{{ row.item }}</td>
+            <td>{{ row.value }}</td>
         </tr>
         {% endfor %}
     </tbody>
