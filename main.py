@@ -29,9 +29,7 @@ def index():
             {"item": "Address", "value": "123 Main St, Springfield"},
             {"item": "Email", "value": "john.doe@example.com"},
             {"item": "Phone", "value": "+123456789"},
-            {"item": "Occupation", "value": "Software Engineer"},
-            {"item": "Card no.", "value": "287490018"},
-            {"item": "Bank card password", "value": "62748763"},        
+            {"item": "Occupation", "value": "Software Engineer"},    
         ]
         return render_template("table_real.html", data=data)
     else:
