@@ -5,7 +5,7 @@ app = Flask(__name__, template_folder="templates")
 logging.basicConfig(level=logging.INFO)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/api/data/', methods=['GET'])
 def get_data():
     # 创建一个 Python 字典
     data = {
