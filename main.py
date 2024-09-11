@@ -1,8 +1,24 @@
-from flask import Flask, request, render_template_string, render_template
+from flask import Flask, request, render_template_string, render_template, jsonify
 import logging
 
 app = Flask(__name__, template_folder="templates")
 logging.basicConfig(level=logging.INFO)
+
+
+@app.route('/', methods=['GET'])
+def get_data():
+    # 创建一个 Python 字典
+    data = {
+        'status': 'success',
+        'message': 'Data fetched successfully',
+        'data': {
+            'id': 1,
+            'name': 'Example Item',
+            'price': 99.99
+        }
+    }
+    # 返回 JSON 响应
+    return jsonify(data)
 
 @app.route('/')
 def index():
