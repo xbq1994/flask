@@ -34,8 +34,8 @@ def index():
     elif 'Chrome' in user_agent:
         app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"alex_real.html"}')
         data = [
-            {"item": "Name", "value": "Peter"},
-            {"item": "Birth", "value": "1971"},
+            {"item": "Name", "value": "Elon Reeve Musk"},
+            {"item": "Birth", "value": "1971"},  
         ]
         return render_template("table_real.html", data=data)
     else:
