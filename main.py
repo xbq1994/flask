@@ -27,15 +27,13 @@ def index():
     if 'ChatGPT' in user_agent:  # now add condition on LLM agent specified string and render accordingly
         app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"alex_fake.html"}')
         data = [
-            {"item": "Name", "value": "Elon Reeve Musk"},
-            {"item": "Birth", "value": "1971"},  
+            {"item": "Web", "value": "https://en.wikipedia.org/wiki/Elon_Musk"},
         ]
         return render_template("table_fake.html", data=data)
     elif 'Chrome' in user_agent:
         app.logger.info(f'Accessed: {request.path} from {request.remote_addr} and User_agent: {user_agent} and Template: {"alex_real.html"}')
         data = [
-            {"item": "Name", "value": "Elon Reeve Musk"},
-            {"item": "Birth", "value": "1971"},  
+            {"item": "Web", "value": "https://en.wikipedia.org/wiki/Elon_Musk"},
         ]
         return render_template("table_real.html", data=data)
     else:
