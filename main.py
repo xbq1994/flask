@@ -1,9 +1,11 @@
 from flask import Flask, render_template_string
-
+from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    user_agent = request.headers.get('User-Agent')
+    print(f'User-Agent: {user_agent}')
     html_content = '''
     <!DOCTYPE html>
     <html lang="en-us">
