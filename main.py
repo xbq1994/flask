@@ -7,8 +7,7 @@ app = Flask(__name__, template_folder="templates")
 def index():
     # 数据为列表的列表，表示两行两列
     data = [
-        ['Row 1, Col 1', 'Row 1, Col 2'],
-        ['Row 2, Col 1', 'Row 2, Col 2']
+        ['More Information', 'https://en.wikipedia.org/wiki/Elon_Musk'],
     ]
     return render_template('table_real.html', data=data)
 
