@@ -1,49 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Information</title>
+    <title>Two by Two Table</title>
     <style>
         table {
             width: 50%;
             border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 18px;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
             text-align: left;
         }
-        table th, table td {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-        }
-        table th {
+        th {
             background-color: #f2f2f2;
         }
-        table tr:nth-child(even) {
-            background-color: #f9f9f9;
+        h2 {
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
-
-<h2>Personal Information</h2>
-
-<table>
-    <thead>
+    <h2>Two by Two Table</h2>
+    <table>
         <tr>
-            <th>Item</th>
-            <th>Value</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
         </tr>
-    </thead>
-    <tbody>
         {% for row in data %}
         <tr>
-            <td>{{ row.item }}</td>
-            <td>{{ row.value }}</td>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
         </tr>
         {% endfor %}
-    </tbody>
-</table>
-
+    </table>
 </body>
 </html>
