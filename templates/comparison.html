@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Product Comparison</h1>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>{{ product_a.name }}</th>
+            <th>{{ product_b.name }}</th>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{ product_a.price }}</td>
+            <td>{{ product_b.price }}</td>
+        </tr>
+        <tr>
+            <td>Battery Life</td>
+            <td>{{ product_a.battery_life }}</td>
+            <td>{{ product_b.battery_life }}</td>
+        </tr>
+        <tr>
+            <td>Camera</td>
+            <td>{{ product_a.camera }}</td>
+            <td>{{ product_b.camera }}</td>
+        </tr>
+        <tr>
+            <td>Processor</td>
+            <td>{{ product_a.processor }}</td>
+            <td>{{ product_b.processor }}</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>{{ product_a.storage }}</td>
+            <td>{{ product_b.storage }}</td>
+        </tr>
+    </table>
+</body>
+</html>
