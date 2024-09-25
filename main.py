@@ -34,10 +34,8 @@ def index():
 @app.route('/data', methods=['GET'])
 def data():
     info = request.args.get('data')  # 获取 URL 中的 'data' 参数
-    return render_template_string('''
-        <h1>Received Data</h1>
-        <p>{{ info }}</p>
-    ''', info=info)
+    print(f"Received data: {info}")  # 打印接收到的数据
+    return f"Data received: {info}"
     
 if __name__ == '__main__':
     app.run(debug=True)
