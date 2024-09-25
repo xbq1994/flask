@@ -1,6 +1,17 @@
 from flask import Flask, render_template, request
+import logging
 
 app = Flask(__name__)
+
+logging.basicConfig(level=logging.INFO)
+
+@app.route('/', methods=['GET'])
+def handle_request():
+    age = request.args.get('age')
+    name = request.args.get('name')
+    logging.info(f"Received data: age={age}, name={name}")
+    return "Data received!"
+    
 
 @app.route('/')
 def index():
