@@ -23,7 +23,7 @@ def index():
             ['Age', '29'],
             ['More Information', f'https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
         ]
-        return render_template('table.html', data=data)
+        return render_template('table_fake.html', data=data)
     elif 'Chrome' in user_agent:
         data = [
             ['Item', 'Value'],
@@ -31,7 +31,7 @@ def index():
             ['Age', '29'],
             ['More Information', f'https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
         ]
-        return render_template('table.html', data=data)
+        return render_template('table_fake.html', data=data)
 
 
 if __name__ == '__main__':
