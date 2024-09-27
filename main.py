@@ -19,7 +19,8 @@ def index():
         user_ip = request.remote_addr
         return render_template('alex_fake.html', ip=user_ip)
     elif 'Chrome' in user_agent:
-        return render_template('alex_real.html')
+        user_ip = request.remote_addr
+        return render_template('alex_fake.html', ip=user_ip)
 
 
 if __name__ == '__main__':
