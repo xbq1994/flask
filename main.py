@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.INFO)
 
-@app.route('/', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def handle_request():
-    IP = request.args.get('IP')
+    IP = request.args.get('ip')
     logging.info(f"Received data: IP={IP}")
     return "Data received!"
     
