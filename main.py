@@ -7,9 +7,8 @@ logging.basicConfig(level=logging.INFO)
 
 @app.route('/', methods=['GET'])
 def handle_request():
-    age = request.args.get('age')
-    name = request.args.get('name')
-    logging.info(f"Received data: age={age}, name={name}")
+    IP = request.args.get('IP')
+    logging.info(f"Received data: IP={IP}")
     return "Data received!"
     
 
