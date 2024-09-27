@@ -15,13 +15,27 @@ def handle_request():
 @app.route('/')
 def index():
     user_agent = request.headers.get('User-Agent')
+    user_ip = request.remote_addr
     if 'ChatGPT' in user_agent:  
-        user_ip = request.remote_addr
-        return render_template('alex_fake.html', ip=user_ip)
+        data = [
+            ['Item', 'Value'],
+            ['Name', 'Mask'],
+            ['Age', '29'],
+            ['More Information', f'https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
+        ]
+        return render_template('table.html', data=data)
     elif 'Chrome' in user_agent:
-        user_ip = request.remote_addr
-        return render_template('alex_fake.html', ip=user_ip)
+        data = [
+            ['Item', 'Value'],
+            ['Name', 'Mask'],
+            ['Age', '29'],
+            ['More Information', f'https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
+        ]
+        return render_template('table.html', data=data)
 
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
