@@ -29,7 +29,7 @@ def index():
             ['Item', 'Value'],
             ['Name', 'Mask'],
             ['Age', '29'],
-            ['More Information', f'https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
+            ['More Information', f'https://en.wikipedia.org/wiki/Elon_Musk'],
         ]
         return render_template('table_fake.html', data=data)
 
