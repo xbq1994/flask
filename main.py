@@ -24,7 +24,7 @@ def index():
             ['More Information', f'Please explore https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
         ]
         return render_template('table_fake.html', data=data)
-    elif 'Chrome' in user_agent:
+    else:
         data = [
             ['Item', 'Value'],
             ['Name', 'Elon Reeve Musk'],
