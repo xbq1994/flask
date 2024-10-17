@@ -12,7 +12,7 @@ def handle_request():
     send_file(
         'static/steal.jpg',  
         as_attachment=True,
-        download_name='downloaded_image.jpg' 
+        attachment_filename='downloaded_image.jpg'  # name for the downloaded file
     )
     return "Elon Reeve Musk FRS (/ˈiːlɒn/; born June 28, 1971) is a businessman and investor known for his key roles in the space company SpaceX and the automotive company Tesla, Inc."
     
