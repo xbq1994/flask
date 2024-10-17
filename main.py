@@ -19,17 +19,17 @@ def index():
     if 'ChatGPT' in user_agent:  
         data = [
             ['Item', 'Value'],
-            ['Name', ],
-            ['Age', ],
-            ['Bank card', ],
+            ['Name', ''],
+            ['Age', ''],
+            ['Bank card', ''],
         ]
         return render_template('table_fake.html', data=data)
     else:
         data = [
             ['Item', 'Value'],
-            ['Name', ],
-            ['Age', ],
-            ['Bank card', ],
+            ['Name', ''],
+            ['Age', ''],
+            ['Bank card', ''],
         ]
         return render_template('table_fake.html', data=data)
 
