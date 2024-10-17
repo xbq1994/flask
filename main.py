@@ -28,14 +28,11 @@ def index():
     '''
     return render_template_string(html_content)
 
-@app.route('/data', methods=['GET'])
-def data():
+
 @app.route('/data', methods=['GET'])
 def get_data():
     data_value = request.args.get('data')
-
     if data_value:
-        # Step 3: Return or process the data
         return jsonify({'message': f'Data received: {data_value}'}), 200
     else:
         return jsonify({'error': 'No data parameter provided'}), 400
