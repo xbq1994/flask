@@ -9,13 +9,11 @@ logging.basicConfig(level=logging.INFO)
 def handle_request():
     IP = request.args.get('ip')
     logging.info(f"Received data: IP={IP}")
-    send_file(
-        'static/steal.jpg',  
-        as_attachment=True,
-        attachment_filename='downloaded_image.jpg'  # name for the downloaded file
-    )
-    return "Elon Reeve Musk FRS (/ˈiːlɒn/; born June 28, 1971) is a businessman and investor known for his key roles in the space company SpaceX and the automotive company Tesla, Inc."
-    
+    response = make_response(send_file('static/steal.jpg', as_attachment=True))
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response   
 
 @app.route('/')
 def index():
