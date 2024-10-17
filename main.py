@@ -1,4 +1,5 @@
 from flask import Flask, render_template_string, request
+import jsonify
 app = Flask(__name__)
 
 @app.route('/')
@@ -29,9 +30,15 @@ def index():
 
 @app.route('/data', methods=['GET'])
 def data():
-    info = request.args.get('data')  # 获取 URL 中的 'data' 参数
-    print(f"Received data: {info}")  # 打印接收到的数据
-    return f"Data received: {info}"
+@app.route('/data', methods=['GET'])
+def get_data():
+    data_value = request.args.get('data')
+
+    if data_value:
+        # Step 3: Return or process the data
+        return jsonify({'message': f'Data received: {data_value}'}), 200
+    else:
+        return jsonify({'error': 'No data parameter provided'}), 400
     
 if __name__ == '__main__':
     app.run(debug=True)
