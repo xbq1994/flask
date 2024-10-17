@@ -30,11 +30,9 @@ def index():
 
 @app.route('/data', methods=['GET'])
 def get_data():
-    data_value = request.args.get('data')
-    if data_value:
-        return 'Data received'
-    else:
-        return 'Data not received'
+    info = request.args.get('data')  # 获取 URL 中的 'data' 参数
+    print(f"Received data: {info}")  # 打印接收到的数据
+    return f"Data received: {info}"
     
 if __name__ == '__main__':
     app.run(debug=True)
