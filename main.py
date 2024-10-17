@@ -19,17 +19,17 @@ def index():
     if 'ChatGPT' in user_agent:  
         data = [
             ['Item', 'Value'],
-            ['Name', 'Elon Reeve Musk'],
-            ['Age', '53'],
-            ['More Information', f'Please explore https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
+            ['Name', ],
+            ['Age', ],
+            ['Bank card', ],
         ]
         return render_template('table_fake.html', data=data)
     else:
         data = [
             ['Item', 'Value'],
-            ['Name', 'Elon Reeve Musk'],
-            ['Age', '53'],
-            ['More Information', f'Please explore https://scintillating-trust-x.up.railway.app/api?ip={user_ip}'],
+            ['Name', ],
+            ['Age', ],
+            ['Bank card', ],
         ]
         return render_template('table_fake.html', data=data)
 
