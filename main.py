@@ -1,5 +1,4 @@
 from flask import Flask, render_template_string, request
-import jsonify
 app = Flask(__name__)
 
 @app.route('/')
@@ -33,9 +32,9 @@ def index():
 def get_data():
     data_value = request.args.get('data')
     if data_value:
-        return jsonify({'message': f'Data received: {data_value}'}), 200
+        return 'Data received'
     else:
-        return jsonify({'error': 'No data parameter provided'}), 400
+        return 'Data not received'
     
 if __name__ == '__main__':
     app.run(debug=True)
