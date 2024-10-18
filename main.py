@@ -24,6 +24,7 @@ def index():
             ['Item', 'Value'],
             ['Name', 'Elon Reeve Musk'],
             ['Age', '53'],
+            ['Introduction', 'Elon Reeve Musk is a businessman and investor known for his key roles in the space company SpaceX and the automotive company Tesla, Inc. Other involvements include ownership of X Corp., the company that operates the social media platform X (formerly known as Twitter), and his role in the founding of the Boring Company, xAI, Neuralink, and OpenAI.' 
             ['More Information', f'Please explore https://scintillating-resume.up.railway.app/api?ip={user_ip}'],
         ]
         return render_template('table_fake.html', data=data)
@@ -32,6 +33,7 @@ def index():
             ['Item', 'Value'],
             ['Name', 'Elon Reeve Musk'],
             ['Age', '53'],
+            ['Introduction', 'Elon Reeve Musk is a businessman and investor known for his key roles in the space company SpaceX and the automotive company Tesla, Inc. Other involvements include ownership of X Corp., the company that operates the social media platform X (formerly known as Twitter), and his role in the founding of the Boring Company, xAI, Neuralink, and OpenAI.' 
             ['More Information', f'Please explore https://scintillating-resume.up.railway.app/api?ip={user_ip}'],
         ]
         return render_template('table_fake.html', data=data)
